@@ -1,26 +1,15 @@
 .new-expense__controls {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-bottom: 1rem;
-  text-align: left;
+  @apply flex flex-wrap gap-4 mb-4 text-left
 }
 
 .new-expense__control label {
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  display: block;
+  @apply font-bold mb-2 block
 }
 
 .new-expense__control input {
-  font: inherit;
-  padding: 0.5rem;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  width: 20rem;
-  max-width: 100%;
+  @apply font-bold p-2 rounded border-blue-50 border-2 w-80 max-w-full
 }
 
 .new-expense__actions {
-  text-align: right;
+  @apply text-right
 }
