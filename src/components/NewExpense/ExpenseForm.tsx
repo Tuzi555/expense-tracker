@@ -30,7 +30,6 @@ const ExpenseForm = () => {
     setEnteredDate(defaultDate);
     console.log(expenseData);
   };
-
   return (
     <form onSubmit={submitHandler}>
       <div className="flex flex-wrap sm:flex-nowrap gap-4 mb-4 text-left">
@@ -59,9 +58,12 @@ const ExpenseForm = () => {
           </div>
         </div>
       </div>
-      <div className="border border-white bg-blue-900 text-white cursor-pointer px-8 py-4 rounded-xl hover:bg-blue-700">
-        <button type="submit">Add Expense</button>
-      </div>
+      <button
+        className="border border-white bg-blue-900 text-white cursor-pointer px-8 py-4 rounded-xl hover:bg-blue-700 w-full"
+        type="submit"
+      >
+        Add Expense
+      </button>
     </form>
   );
 };
