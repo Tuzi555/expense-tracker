@@ -1,13 +1,13 @@
-.new-expense__controls {
-  @apply flex flex-wrap gap-4 mb-4 text-left
+.new-expense__control div{
+  @apply overflow-hidden
 }
 
 .new-expense__control label {
-  @apply font-bold mb-2 block
+  @apply font-bold mb-2 block text-white
 }
 
 .new-expense__control input {
-  @apply font-bold p-2 rounded border-blue-50 border-2 w-80 max-w-full
+  @apply font-bold p-2 rounded w-full
 }
 
 .new-expense__actions {

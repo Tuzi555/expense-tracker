@@ -12,7 +12,6 @@ html {
 }
 
 body {
-  margin: 0;
-  background-color: #3f3f3f;
+  @apply m-0 bg-slate-700
 }
 

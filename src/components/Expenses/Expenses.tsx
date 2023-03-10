@@ -1,7 +1,6 @@
 import React, {FC} from 'react';
 
 import ExpenseItem, {ExpenseItemProps} from './ExpenseItem.js';
-import Card from '../UI/Card';
 import './Expenses.css';
 
 interface ExpensesProps {
@@ -10,7 +9,7 @@ interface ExpensesProps {
 
 const Expenses:FC<ExpensesProps> = (props) => {
   return (
-    <Card className="expenses">
+    <div className="expenses rounded-2xl">
       <ExpenseItem
         title={props.items[0].title}
         amount={props.items[0].amount}
@@ -31,7 +30,7 @@ const Expenses:FC<ExpensesProps> = (props) => {
         amount={props.items[3].amount}
         date={props.items[3].date}
       />
-    </Card>
+    </div>
   );
 }
 
