@@ -1,8 +1,13 @@
 import React, { ChangeEvent, FormEvent, useState } from 'react';
 
 import './ExpenseForm.css';
+import { ExpenseItemModel } from '../../models/ExepnseItemModel';
 
-const ExpenseForm = () => {
+interface ExpenseFormProps {
+  onSaveExpenseData: (submittedExpenseItem: ExpenseItemModel) => void;
+}
+
+const ExpenseForm = (props: ExpenseFormProps) => {
   const defaultDate = new Date('2020-01-01');
 
   const [enteredTitle, setEnteredTitle] = useState('');
@@ -25,10 +30,13 @@ const ExpenseForm = () => {
       amount: enteredAmount,
       date: enteredDate,
     };
+    props.onSaveExpenseData({
+      ...expenseData,
+      id: Math.random().toString(),
+    });
     setEnteredTitle('');
     setEnteredAmount(0);
     setEnteredDate(defaultDate);
-    console.log(expenseData);
   };
   return (
     <form onSubmit={submitHandler}>

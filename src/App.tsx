@@ -2,6 +2,7 @@ import React from 'react';
 
 import NewExpense from "./components/NewExpense/NewExpense";
 import Expenses from './components/Expenses/Expenses';
+import {ExpenseItemModel} from "./models/ExepnseItemModel";
 
 const App = () => {
     const expenses = [
@@ -26,9 +27,14 @@ const App = () => {
         },
     ];
 
+    const newExpenseAddedHandler = (newExpense: ExpenseItemModel) => {
+        expenses.push(newExpense)
+        console.log(expenses)
+    }
+
     return (
         <div>
-            <NewExpense />
+            <NewExpense onNewExpenseAdded={newExpenseAddedHandler}/>
             <Expenses items={expenses} />
         </div>
     );
