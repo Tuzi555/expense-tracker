@@ -1,7 +1,7 @@
 import React, { ChangeEvent, FormEvent, useState } from 'react';
 
 import './ExpenseForm.css';
-import { ExpenseItemModel } from '../../models/ExepnseItemModel';
+import { ExpenseItemModel } from '../expenses/models/ExepnseItemModel';
 
 interface ExpenseFormProps {
   onSaveExpenseData: (submittedExpenseItem: ExpenseItemModel) => void;

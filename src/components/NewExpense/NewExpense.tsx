@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 
 import ExpenseForm from './ExpenseForm.js';
 import './NewExpense.css';
-import { ExpenseItemModel } from '../../models/ExepnseItemModel';
+import { ExpenseItemModel } from '../expenses/models/ExepnseItemModel';
 
 interface NewExpenseProps {
   onNewExpenseAdded: (newExpense: ExpenseItemModel) => void;

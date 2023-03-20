@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { StrictMode, useState } from 'react';
 
 import NewExpense from './components/NewExpense/NewExpense';
-import Expenses from './components/Expenses/Expenses';
-import { ExpenseItemModel } from './models/ExepnseItemModel';
+import Expenses from './components/expenses/Expenses';
+import { ExpenseItemModel } from './components/expenses/models/ExepnseItemModel';
 
 const DUMMY_EXPENSES = [
   {
@@ -36,10 +36,10 @@ const App = () => {
   };
 
   return (
-    <div>
+    <StrictMode>
       <NewExpense onNewExpenseAdded={newExpenseAddedHandler} />
       <Expenses items={expenses} />
-    </div>
+    </StrictMode>
   );
 };
 

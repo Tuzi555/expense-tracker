@@ -3,6 +3,7 @@ import React, { ChangeEvent, FC } from 'react';
 interface ExpenseFilterProps {
   selectedYear: string;
   onFilterExpenses: (selectedYear: string) => void;
+  availableYears: number[];
 }
 
 const ExpensesFilter: FC<ExpenseFilterProps> = (props) => {
@@ -18,10 +19,12 @@ const ExpensesFilter: FC<ExpenseFilterProps> = (props) => {
           onChange={changeYearHandler}
           value={props.selectedYear}
         >
-          <option value="2022">2022</option>
-          <option value="2021">2021</option>
-          <option value="2020">2020</option>
-          <option value="2019">2019</option>
+          <option key="All" value="All">All</option>
+          {props.availableYears.map((year) => (
+            <option key={year} value={year}>
+              {year}
+            </option>
+          ))}
         </select>
       </div>
     </div>

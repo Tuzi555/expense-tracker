@@ -3,12 +3,9 @@ import React, {FC} from 'react';
 import ExpenseDate from './ExpenseDate.js';
 import Card from '../UI/Card';
 import './ExpenseItem.css';
-import {ExpenseItemModel} from "../../models/ExepnseItemModel";
+import {ExpenseItemModel} from "./models/ExepnseItemModel";
 
 const ExpenseItem:FC<ExpenseItemModel> = (props) => {
-  // function clickHandler() {}
-  console.log('ExpenseItem evaluated by React');
-
   return (
     <Card className='expense-item'>
       <ExpenseDate date={props.date} />
